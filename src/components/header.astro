@@ -1,0 +1,22 @@
+---
+import { HeaderEmail, HeaderPhone } from "../config";
+import Img from "./img.astro";
+---
+
+<div
+    class="bg-transparent h-14 flex justify-between items-center max-w-5xl w-full absolute z-10 left-1/2 -translate-x-1/2"
+>
+    <div class="text-3xl text-white">Logo</div>
+
+    <div class="flex justify-between text-white w-4/6">
+        <p class="flex items-center justify-between">
+            <Img class="mr-4" src={HeaderPhone} alt="header-phone" />
+            <span>079 776 1203</span>
+        </p>
+
+        <p class="flex items-center">
+            <Img class="mr-4" src={HeaderEmail} alt="header-phone" />
+            <span>hlconstructionnhatrang@gmail.com</span>
+        </p>
+    </div>
+</div>
