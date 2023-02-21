@@ -1,0 +1,1 @@
+export const HeroImage = '../images/heroimg.png';
