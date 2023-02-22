@@ -1,6 +1,12 @@
 ---
 import Img from "./img.astro";
 import ServicesItem from "./services-item.astro";
+import {
+    ServiceImage1,
+    ServiceImage2,
+    ServiceImage3,
+    ServiceImage4,
+} from "../config";
 ---
 
 <div class="h-screen w-full pt-10 max-w-5xl m-auto">
@@ -20,28 +26,32 @@ import ServicesItem from "./services-item.astro";
     <div class="mt-20 flex">
         <div class="flex flex-col justify-between">
             <ServicesItem
-                src="../images/service1.png"
+                src={ServiceImage1}
                 title="Cải tạo - Sửa chữa"
                 summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a ex eu nisl euismod viverra. Nullam vel eros."
             />
             <ServicesItem
-                src="../images/service4.png"
+                src={ServiceImage4}
                 title="Chống thấm"
                 summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a ex eu nisl euismod viverra. Nullam vel eros."
             />
         </div>
 
-        <Img class="w-3/12 h-full" src="../images/service.png" alt="Service Image" />
+        <Img
+            class="w-3/12 h-full"
+            src="../images/service.png"
+            alt="Service Image"
+        />
 
         <div class="flex flex-col justify-between">
             <ServicesItem
-                src="../images/service2.png"
+                src={ServiceImage2}
                 title="Thiết kế - Thi công"
                 summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a ex eu nisl euismod viverra. Nullam vel eros."
                 reverse={true}
             />
             <ServicesItem
-                src="../images/service3.png"
+                src={ServiceImage3}
                 title="Giám sát kỹ thuật"
                 summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a ex eu nisl euismod viverra. Nullam vel eros."
                 reverse={true}
