@@ -1,0 +1,51 @@
+---
+import Img from "./img.astro";
+import ServicesItem from "./services-item.astro";
+---
+
+<div class="h-screen w-full pt-10 max-w-5xl m-auto">
+    <h1 class="text-5xl font-bold text-center">Dịch vụ của chúng tôi</h1>
+    <div class="w-full m-auto h-px bg-slate-300 mt-5">
+        <div
+            class="absolute w-1/4 z-10 left-1/2 -translate-x-1/2 bg-dark h-0.5"
+        >
+        </div>
+    </div>
+
+    <p class="text-center text-xl mt-5">
+        Duis sed odio sit amet nibh vulputate cursus a sit amet mauris morbi
+        accumsan ipsum velit.
+    </p>
+
+    <div class="mt-20 flex">
+        <div class="flex flex-col justify-between">
+            <ServicesItem
+                src="../images/service1.png"
+                title="Cải tạo - Sửa chữa"
+                summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a ex eu nisl euismod viverra. Nullam vel eros."
+            />
+            <ServicesItem
+                src="../images/service4.png"
+                title="Chống thấm"
+                summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a ex eu nisl euismod viverra. Nullam vel eros."
+            />
+        </div>
+
+        <Img class="w-3/12 h-full" src="../images/service.png" alt="Service Image" />
+
+        <div class="flex flex-col justify-between">
+            <ServicesItem
+                src="../images/service2.png"
+                title="Thiết kế - Thi công"
+                summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a ex eu nisl euismod viverra. Nullam vel eros."
+                reverse={true}
+            />
+            <ServicesItem
+                src="../images/service3.png"
+                title="Giám sát kỹ thuật"
+                summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a ex eu nisl euismod viverra. Nullam vel eros."
+                reverse={true}
+            />
+        </div>
+    </div>
+</div>
