@@ -34,3 +34,27 @@ export const ProjectImage = [
         alt: 'Project Image'
     }
 ];
+
+export const Feedbacks = [
+    {
+        title: 'Chất lượng dịch vụ tốt, hiện đại',
+        description: '“Chất lượng xây dựng ở đây rất hoàn thiện. Bảo trì thường xuyên và tiếp nhận phản hồi khách hàng nhanh chóng.”',
+        avatar: '../images/service.png',
+        name: 'Khách hàng 1',
+        job: 'Nhân viên văn phòng'
+    },
+    {
+        title: 'Chất lượng dịch vụ tốt, hiện đại',
+        description: '“Chất lượng xây dựng ở đây rất hoàn thiện. Bảo trì thường xuyên và tiếp nhận phản hồi khách hàng nhanh chóng.”',
+        avatar: '../images/service.png',
+        name: 'Khách hàng 1',
+        job: 'Nhân viên văn phòng'
+    },
+    {
+        title: 'Chất lượng dịch vụ tốt, hiện đại',
+        description: '“Chất lượng xây dựng ở đây rất hoàn thiện. Bảo trì thường xuyên và tiếp nhận phản hồi khách hàng nhanh chóng.”',
+        avatar: '../images/service.png',
+        name: 'Khách hàng 1',
+        job: 'Nhân viên văn phòng'
+    }
+]
