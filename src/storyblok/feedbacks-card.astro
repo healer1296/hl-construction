@@ -1,0 +1,24 @@
+---
+import { storyblokEditable } from "@storyblok/astro";
+
+const { blok } = Astro.props;
+---
+
+<div {...storyblokEditable(blok)} class="p-4 shadow-custom rounded-lg">
+    <div
+        class="bg-mixed text-white font-bold text-xl p-6 text-center rounded-lg"
+    >
+        {blok.title}
+    </div>
+
+    <p class="text-lg text-center mt-3 italic font-thin">{blok.description}</p>
+
+    <div class="mt-14">
+        <img
+            class="w-20 h-20 border rounded-full border-mixed p-2 m-auto"
+            src={blok.avatar.filename}
+        />
+        <p class="text-xl font-black text-center mt-5">{blok.name}</p>
+        <p class="text-lg font-thin text-center">{blok.job}</p>
+    </div>
+</div>

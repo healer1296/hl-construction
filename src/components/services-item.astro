@@ -1,6 +1,4 @@
 ---
-import Img from "./img.astro";
-
 export interface Props {
     src: string;
     title: string;
@@ -11,11 +9,11 @@ export interface Props {
 const { src, title, summary, reverse } = Astro.props;
 ---
 
-<div class={reverse ? 'flex flex-row-reverse item-start' : 'flex item-start'}>
-    <div class={reverse ? '' : 'text-right'}>
+<div class={reverse ? "flex flex-row-reverse item-start" : "flex item-start"}>
+    <div class={reverse ? "" : "text-right"}>
         <h1 class="text-2xl font-black mb-2">{title}</h1>
         <p class="text-lg">{summary}</p>
     </div>
 
-    <Img class="w-3/12 h-1/2 mx-4 mt-3" src={src} alt={title} />
+    <img class="w-3/12 h-1/2 mx-4 mt-3" src={src} alt={title} />
 </div>

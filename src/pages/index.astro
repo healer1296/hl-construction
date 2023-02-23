@@ -1,15 +1,16 @@
 ---
-import Hero from "../components/hero.astro";
-import Services from "../components/services.astro";
-import Projects from "../components/projects.astro";
-
+import { useStoryblokApi } from '@storyblok/astro'
+import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
 import Base from "../layouts/base.astro";
-import Feedbacks from "../components/feedbacks.astro";
+
+const storyblokApi = useStoryblokApi();
+const { data } = await storyblokApi.get('cdn/stories/home', {
+  version: 'draft',
+})
+
+const story = data.story
 ---
 
-<Base title="Welcome to HL Construction">
-	<Hero />
-	<Services />
-	<Projects />
-	<Feedbacks />
+<Base title="HL Construction">
+	<StoryblokComponent blok={story.content} />
 </Base>
