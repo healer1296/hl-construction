@@ -1,19 +1,19 @@
 ---
 export interface Props {
-    src: string;
-    title: string;
-    summary: string;
-    reverse?: boolean;
+  src: string;
+  title: string;
+  summary: string;
+  reverse?: boolean;
 }
 
 const { src, title, summary, reverse } = Astro.props;
 ---
 
-<div class={reverse ? "flex flex-row-reverse item-start" : "flex item-start"}>
-    <div class={reverse ? "" : "text-right"}>
-        <h1 class="text-2xl font-black mb-2">{title}</h1>
-        <p class="text-lg">{summary}</p>
-    </div>
+<div class={reverse ? 'flex flex-row-reverse item-start mb-10' : 'flex item-start mb-10'}>
+  <div class={reverse ? '' : 'text-right'}>
+    <h1 class="text-xl xl:text-2xl font-semibold mb-2">{title}</h1>
+    <p class="xl:text-lg">{summary}</p>
+  </div>
 
-    <img class="w-3/12 h-1/2 mx-4 mt-3" src={src} alt={title} />
+  <img class="w-3/12 h-1/2 mx-4 mt-3" src={src} alt={title} />
 </div>

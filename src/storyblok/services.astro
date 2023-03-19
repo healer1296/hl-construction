@@ -1,58 +1,62 @@
 ---
-import ServicesItem from "../components/services-item.astro";
-import { storyblokEditable } from "@storyblok/astro";
+import ServicesItem from '../components/services-item.astro';
+import { storyblokEditable } from '@storyblok/astro';
 
 const { blok } = Astro.props;
 ---
 
-<section
-    {...storyblokEditable(blok)}
-    class="h-screen w-full pt-10 max-w-5xl m-auto"
->
-    <h1 class="text-5xl font-bold text-center">{blok.title}</h1>
+<section {...storyblokEditable(blok)} class="h-screen w-full pt-10 max-w-[22rem] xl:max-w-5xl m-auto">
+  <h1 class="text-2xl xl:text-5xl font-semibold text-center">{blok.title}</h1>
 
-    <div class="w-full m-auto h-px bg-slate-300 mt-5">
-        <div
-            class="absolute w-1/4 z-10 left-1/2 -translate-x-1/2 bg-dark h-0.5"
-        >
-        </div>
+  <div class="w-full m-auto h-px bg-slate-300 mt-5">
+    <div class="absolute w-1/4 z-10 left-1/2 -translate-x-1/2 bg-dark h-0.5"></div>
+  </div>
+
+  <p class="text-center mt-5 xl:text-xl">{blok.subtitle}</p>
+
+  <div class="mt-10 xl:hidden">
+    <div class="flex flex-col justify-between">
+      <ServicesItem
+        src={blok.service_image_1.filename}
+        title={blok.service_name_1}
+        summary={blok.service_description_1}
+        reverse={true}
+      />
+      <ServicesItem src={blok.service_image_4.filename} title={blok.service_name_4} summary={blok.service_description_4} />
     </div>
 
-    <p class="text-center text-xl mt-5">{blok.subtitle}</p>
-
-    <div class="mt-20 flex">
-        <div class="flex flex-col justify-between">
-            <ServicesItem
-                src={blok.service_image_1.filename}
-                title={blok.service_name_1}
-                summary={blok.service_description_1}
-            />
-            <ServicesItem
-                src={blok.service_image_4.filename}
-                title={blok.service_name_4}
-                summary={blok.service_description_4}
-            />
-        </div>
-
-        <img
-            class="w-3/12 h-full"
-            src={blok.image.filename}
-            alt="Service Image"
-        />
-
-        <div class="flex flex-col justify-between">
-            <ServicesItem
-                src={blok.service_image_2.filename}
-                title={blok.service_name_2}
-                summary={blok.service_description_2}
-                reverse={true}
-            />
-            <ServicesItem
-                src={blok.service_image_3.filename}
-                title={blok.service_name_3}
-                summary={blok.service_description_3}
-                reverse={true}
-            />
-        </div>
+    <div class="flex flex-col justify-between">
+      <ServicesItem
+        src={blok.service_image_2.filename}
+        title={blok.service_name_2}
+        summary={blok.service_description_2}
+        reverse={true}
+      />
+      <ServicesItem src={blok.service_image_3.filename} title={blok.service_name_3} summary={blok.service_description_3} />
     </div>
+  </div>
+
+  <div class="mt-10 xl:mt-20 hidden xl:flex">
+    <div class="flex flex-col justify-between">
+      <ServicesItem src={blok.service_image_1.filename} title={blok.service_name_1} summary={blok.service_description_1} />
+      <ServicesItem src={blok.service_image_4.filename} title={blok.service_name_4} summary={blok.service_description_4} />
+    </div>
+
+    <img class="w-3/12 h-full" src={blok.image.filename} alt="Service Image" />
+
+    <div class="flex flex-col justify-between">
+      <ServicesItem
+        src={blok.service_image_2.filename}
+        title={blok.service_name_2}
+        summary={blok.service_description_2}
+        reverse={true}
+      />
+      <ServicesItem
+        src={blok.service_image_3.filename}
+        title={blok.service_name_3}
+        summary={blok.service_description_3}
+        reverse={true}
+      />
+    </div>
+  </div>
 </section>

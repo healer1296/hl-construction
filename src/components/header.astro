@@ -1,22 +1,22 @@
 ---
-import { HeaderEmail, HeaderPhone } from "../config";
-import Img from "./img.astro";
+import { HeaderEmail, HeaderPhone } from '../config';
+import Img from './img.astro';
 ---
 
-<div
-    class="bg-transparent h-14 flex justify-between items-center max-w-5xl w-full absolute z-10 left-1/2 -translate-x-1/2"
->
-    <div class="text-3xl text-white">HL Construction</div>
+<header class="bg-transparent h-14 absolute z-10 left-1/2 -translate-x-1/2 w-full">
+  <div class="max-w-[22rem] xl:max-w-5xl m-auto my-5 xl:flex xl:justify-between xl:items-center">
+    <div class="text-3xl text-white mb-5">HL Construction</div>
 
-    <div class="flex justify-between text-white w-7/12">
-        <p class="flex items-center justify-between">
-            <Img class="mr-4" src={HeaderPhone} alt="header-phone" />
-            <span>079 776 1203</span>
-        </p>
+    <div class="text-white w-7/12 xl:flex xl:justify-between xl:items-center">
+      <p class="flex items-center xl:justify-between">
+        <Img class="mr-4" src={HeaderPhone} alt="header-phone" />
+        <span>079 776 1203</span>
+      </p>
 
-        <p class="flex items-center">
-            <Img class="mr-4" src={HeaderEmail} alt="header-phone" />
-            <span>hlconstructionnhatrang@gmail.com</span>
-        </p>
+      <p class="flex items-center">
+        <Img class="mr-4" src={HeaderEmail} alt="header-phone" />
+        <span>hlconstructionnhatrang@gmail.com</span>
+      </p>
     </div>
-</div>
+  </div>
+</header>
