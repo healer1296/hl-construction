@@ -1,21 +1,19 @@
-import {
-  defineConfig
-} from 'astro/config';
-import {
-  loadEnv
-} from 'vite';
+import { defineConfig } from 'astro/config';
+import { loadEnv } from 'vite';
 import storyblok from '@storyblok/astro';
 
 // https://astro.build/config
-import tailwind from "@astrojs/tailwind";
+import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
-import image from "@astrojs/image";
+import image from '@astrojs/image';
 
-const env = loadEnv("", process.cwd(), 'STORYBLOK');
+const env = loadEnv('', process.cwd(), 'STORYBLOK');
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://healer1296.github.io',
+  base: '/hl-construction',
   integrations: [
     tailwind(),
     image(),
@@ -27,8 +25,8 @@ export default defineConfig({
         service: 'storyblok/services',
         project: 'storyblok/projects',
         feedback: 'storyblok/feedbacks',
-        feedbackcard: 'storyblok/feedbacks-card'
+        feedbackcard: 'storyblok/feedbacks-card',
       },
-    })
+    }),
   ],
 });
