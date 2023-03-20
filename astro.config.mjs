@@ -12,8 +12,7 @@ const env = loadEnv('', process.cwd(), 'STORYBLOK');
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://healer1296.github.io',
-  base: '/hl-construction',
+  site: 'https://xaydungkhanhhoa.vn',
   integrations: [
     tailwind(),
     image(),
