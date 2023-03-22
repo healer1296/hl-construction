@@ -4,7 +4,7 @@ import { storyblokEditable } from '@storyblok/astro';
 const { blok } = Astro.props;
 ---
 
-<section {...storyblokEditable(blok)} class="bg-slate-50 w-full xl:h-screen py-10">
+<section {...storyblokEditable(blok)} class="bg-slate-50 w-full py-10">
   <div class="max-w-[22rem] xl:max-w-5xl m-auto">
     <h1 class="text-2xl xl:text-5xl font-semibold text-center">{blok.title}</h1>
 
@@ -14,13 +14,13 @@ const { blok } = Astro.props;
 
     <p class="text-center mt-5 xl:text-xl">{blok.subtitle}</p>
 
-    <div class="mt-10 xl:mt-20 grid grid-cols-2 xl:grid-cols-3 gap-4">
-      <img src={blok.image_1.filename} alt={blok.image_1.alt} />
-      <img src={blok.image_2.filename} alt={blok.image_2.alt} />
-      <img src={blok.image_3.filename} alt={blok.image_3.alt} />
-      <img src={blok.image_4.filename} alt={blok.image_4.alt} />
-      <img src={blok.image_5.filename} alt={blok.image_5.alt} />
-      <img src={blok.image_6.filename} alt={blok.image_6.alt} />
+    <div class="mt-10 xl:mt-20 flex flex-wrap items-center justify-center xl:justify-between xl:items-stretch">
+      <img class="max-w-xs w-full mb-6 object-cover" src={blok.image_1.filename} alt={blok.image_1.alt} />
+      <img class="max-w-xs w-full mb-6 object-cover" src={blok.image_2.filename} alt={blok.image_2.alt} />
+      <img class="max-w-xs w-full mb-6 object-cover" src={blok.image_3.filename} alt={blok.image_3.alt} />
+      <img class="max-w-xs w-full mb-6 object-cover" src={blok.image_4.filename} alt={blok.image_4.alt} />
+      <img class="max-w-xs w-full mb-6 object-cover" src={blok.image_5.filename} alt={blok.image_5.alt} />
+      <img class="max-w-xs w-full mb-6 object-cover" src={blok.image_6.filename} alt={blok.image_6.alt} />
     </div>
   </div>
 </section>
